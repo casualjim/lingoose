@@ -2,12 +2,13 @@ package jsondb
 
 import (
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"math"
 	"os"
 	"sort"
+
+	"github.com/goccy/go-json"
 
 	"github.com/google/uuid"
 	"github.com/henomis/lingoose/embedder"
@@ -57,7 +58,7 @@ func (d *DB) save() error {
 		return err
 	}
 
-	return os.WriteFile(d.dbPath, jsonContent, 0600)
+	return os.WriteFile(d.dbPath, jsonContent, 0o600)
 }
 
 func (d *DB) load() error {
@@ -241,7 +242,7 @@ func (d *DB) cosineSimilarityBatch(a embedder.Embedding) ([]float64, error) {
 }
 
 func filterSearchResults(searchResults index.SearchResults, topK int) index.SearchResults {
-	//sort by similarity score
+	// sort by similarity score
 	sort.Slice(searchResults, func(i, j int) bool {
 		return (1 - searchResults[i].Score) < (1 - searchResults[j].Score)
 	})

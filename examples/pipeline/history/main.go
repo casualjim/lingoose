@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/history"
 	"github.com/henomis/lingoose/legacy/chat"
@@ -14,7 +15,6 @@ import (
 )
 
 func main() {
-
 	history := history.NewHistoryRAM()
 
 	llmChatOpenAI := openai.NewChat()
@@ -64,5 +64,4 @@ func main() {
 	fmt.Println("---History---")
 	dump, _ := json.MarshalIndent(history.All(), "", "  ")
 	fmt.Printf("%s\n", string(dump))
-
 }

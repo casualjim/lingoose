@@ -2,8 +2,9 @@ package nomicembedder
 
 import (
 	"bytes"
-	"encoding/json"
 	"io"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/embedder"
 	"github.com/henomis/restclientgo"

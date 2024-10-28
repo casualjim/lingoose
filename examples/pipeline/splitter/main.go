@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/legacy/memory/ram"
 	"github.com/henomis/lingoose/legacy/pipeline"
@@ -13,7 +14,6 @@ import (
 )
 
 func main() {
-
 	cache := ram.New()
 	llmOpenAI := openai.NewCompletion().WithVerbose(true)
 
@@ -76,7 +76,6 @@ func main() {
 	fmt.Println("------------")
 	fmt.Println("Memory:")
 	fmt.Println(cache)
-
 }
 
 func mergeMaps(m1 types.M, m2 types.M) types.M {

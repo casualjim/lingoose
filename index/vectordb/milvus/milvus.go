@@ -2,10 +2,11 @@ package milvus
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"os"
 	"strconv"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/index"
 	"github.com/henomis/lingoose/index/option"
@@ -109,7 +110,6 @@ func (d *DB) Drop(ctx context.Context) error {
 		},
 		&milvusgoresponse.CollectionDrop{},
 	)
-
 	if err != nil {
 		return fmt.Errorf("%w: %w", index.ErrInternal, err)
 	}

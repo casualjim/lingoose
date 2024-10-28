@@ -2,11 +2,12 @@ package openai
 
 import (
 	"bytes"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"reflect"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/invopop/jsonschema"
 	"github.com/sashabaranov/go-openai"

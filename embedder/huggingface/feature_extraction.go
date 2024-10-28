@@ -2,7 +2,8 @@ package huggingfaceembedder
 
 import (
 	"context"
-	"encoding/json"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/embedder"
 )

@@ -1,6 +1,6 @@
 package types
 
-import "encoding/json"
+import "github.com/goccy/go-json"
 
 type M map[string]interface{}
 

@@ -3,10 +3,11 @@ package huggingface
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"errors"
 	"io"
 	"net/http"
+
+	"github.com/goccy/go-json"
 )
 
 func (h *HuggingFace) doRequest(ctx context.Context, jsonBody []byte, model string) ([]byte, error) {

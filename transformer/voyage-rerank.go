@@ -3,10 +3,11 @@ package transformer
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/document"
 	"github.com/henomis/lingoose/types"

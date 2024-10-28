@@ -3,11 +3,12 @@ package antropic
 import (
 	"bytes"
 	"encoding/base64"
-	"encoding/json"
 	"io"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/restclientgo"
 )

@@ -3,11 +3,12 @@ package main
 import (
 	"bufio"
 	"context"
-	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/legacy/chat"
 	"github.com/henomis/lingoose/legacy/prompt"

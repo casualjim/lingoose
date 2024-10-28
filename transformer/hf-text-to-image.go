@@ -3,12 +3,13 @@ package transformer
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/goccy/go-json"
 )
 
 const (

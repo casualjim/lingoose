@@ -3,10 +3,11 @@ package postgres
 import (
 	"context"
 	"database/sql"
-	"encoding/json"
 	"fmt"
 	"strconv"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/google/uuid"
 	"github.com/henomis/lingoose/index"

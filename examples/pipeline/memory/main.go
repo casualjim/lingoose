@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/legacy/decoder"
 	"github.com/henomis/lingoose/legacy/memory/ram"
@@ -13,7 +14,6 @@ import (
 )
 
 func main() {
-
 	cache := ram.New()
 
 	prompt1 := prompt.New("Hello how are you?")

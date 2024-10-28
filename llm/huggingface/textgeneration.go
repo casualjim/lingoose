@@ -2,9 +2,10 @@ package huggingface
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"strings"
+
+	"github.com/goccy/go-json"
 )
 
 type textGenerationRequest struct {

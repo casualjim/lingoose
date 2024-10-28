@@ -2,17 +2,16 @@
 package decoder
 
 import (
-	"encoding/json"
 	"errors"
 	"fmt"
 	"regexp"
 
+	"github.com/goccy/go-json"
+
 	"github.com/henomis/lingoose/types"
 )
 
-var (
-	ErrDecoding = errors.New("decoding output error")
-)
+var ErrDecoding = errors.New("decoding output error")
 
 type JSONDecoder struct {
 	output types.M

@@ -2,10 +2,11 @@ package loader
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/document"
 	"github.com/henomis/lingoose/types"

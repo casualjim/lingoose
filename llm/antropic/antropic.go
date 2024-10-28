@@ -2,12 +2,13 @@ package antropic
 
 import (
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/restclientgo"
 
@@ -25,9 +26,7 @@ const (
 	defaultEndpoint        = "https://api.anthropic.com/v1"
 )
 
-var (
-	ErrAnthropicChat = fmt.Errorf("anthropic chat error")
-)
+var ErrAnthropicChat = fmt.Errorf("anthropic chat error")
 
 var threadRoleToAnthropicRole = map[thread.Role]string{
 	thread.RoleSystem:    "system",

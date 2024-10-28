@@ -2,11 +2,12 @@ package ollama
 
 import (
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/restclientgo"
 
@@ -24,9 +25,7 @@ const (
 	defaultEndpoint   = "http://localhost:11434/api"
 )
 
-var (
-	ErrOllamaChat = fmt.Errorf("ollama chat error")
-)
+var ErrOllamaChat = fmt.Errorf("ollama chat error")
 
 var threadRoleToOllamaRole = map[thread.Role]string{
 	thread.RoleSystem:    "system",

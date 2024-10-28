@@ -3,13 +3,14 @@ package loader
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/document"
 	"github.com/henomis/lingoose/types"

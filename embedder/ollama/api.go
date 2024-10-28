@@ -2,8 +2,9 @@ package ollamaembedder
 
 import (
 	"bytes"
-	"encoding/json"
 	"io"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/restclientgo"
 )

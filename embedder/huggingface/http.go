@@ -3,10 +3,11 @@ package huggingfaceembedder
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"errors"
 	"io"
 	"net/http"
+
+	"github.com/goccy/go-json"
 )
 
 const APIBaseURL = "https://api-inference.huggingface.co/pipeline/feature-extraction/"

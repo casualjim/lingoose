@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+
+	"github.com/goccy/go-json"
 
 	"github.com/henomis/lingoose/legacy/chat"
 	"github.com/henomis/lingoose/legacy/decoder"
@@ -15,7 +16,6 @@ import (
 )
 
 func main() {
-
 	cache := ram.New()
 
 	llmChatOpenAI := openai.NewChat().WithVerbose(true)
@@ -81,5 +81,4 @@ func main() {
 	fmt.Println("---Memory---")
 	dump, _ := json.MarshalIndent(cache.All(), "", "  ")
 	fmt.Printf("%s\n", string(dump))
-
 }
